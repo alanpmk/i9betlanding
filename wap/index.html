@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chào mừng quý khách</title>
+  <script src="../ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/wap.css">
+  <script src="js/js.js"></script>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <script type="text/javascript">
+    var oWidth =
+      document.documentElement.clientWidth || document.body.clientWidth;
+    if (oWidth > 1024) {
+      window.location.href = "../index.html";
+    } else {
+    }
+    window.addEventListener(
+      "orientationchange",
+      function () {
+        var oWidth =
+          document.documentElement.clientWidth || document.body.clientWidth;
+        if (oWidth > 1024) {
+          window.location.href = "../index.html";
+        }
+      },
+      false
+    );
+    window.addEventListener(
+      "resize",
+      function () {
+        var oWidth =
+          document.documentElement.clientWidth || document.body.clientWidth;
+        if (oWidth > 1024) {
+          window.location.href = "../index.html";
+        }
+      },
+      false
+    );
+  </script>
+
+
+</head>
+
+<body>
+
+
+  <header>
+    <img src="img/logo.png" alt="">
+  </header>
+  <div class="container">
+    <div class="videoBox">
+      <video class="video" autoplay="autoplay" muted="true" loop="loop" x5-video-player-fullscreen="true"
+        x5-playsinline="" playsinline="" webkit-playsinline="">
+        <source src="../wap.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="txt"><img src="img/txt.png" alt=""></div>
+    <ul class="menu">
+      <li>
+        <a target="_blank" class="thcom" href="#!">
+          <img src="img/menu01.png" alt="">
+          <span class="text">
+            <span class="vi">TRANG CHỦ</span>
+            <span class="en">ENTER WEBSITE</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" class="act" href="https://www.i9bet56.com/Promotion">
+          <img src="img/menu02.png" alt="">
+          <span class="text">
+            <span class="vi">KHUYẾN MÃI</span>
+            <span class="en">PROMOTE</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://app.i99902.com/">
+          <img src="img/menu03.png" alt="">
+          <span class="text">
+            <span class="vi">TẢI APP</span>
+            <span class="en">APP DOWNLOAD</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://vscaue.9dowwcfb.com/chatwindow.aspx?siteId=60003853&planId=1bc1214c-f8e0-4ac8-8fa6-026aca69d47e">
+          <img src="img/menu04.png" alt="">
+          <span class="text">
+            <span class="vi">HỖ TRỢ KH</span>
+            <span class="en">CONTACT US</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+    <span class="copy">COPYRIGHT © i9BET.COM RESERVED</span>
+  </footer>
+
+  <!-- 彈窗 -->
+  <div class="popup" style="display: none;">
+    <div class="up">
+      <img src="img/up.png" alt="">
+      <div class="close"><a href="#"></a></div>
+    </div>
+    <div class="upmask"></div>
+  </div>
+
+
+  <!-- 隨機跳轉 -->
+  <script>
+    $(function () {
+      // 彈窗
+      // $('.popup').fadeIn(200);
+      // $('.popup .close').click(function () {
+      //   $('.popup').fadeOut(200);
+      // })
+
+
+      //單按鈕跳轉隨機網址程式 start
+      $('.thcom').click(function () {
+        var str1 = 'https';
+        var str2 = '://';
+        var protGroup = ['/']; //網址後的port選擇    比如 0011540.com:540   540就是他的port
+        //上方.thcom 是指定按鈕的class
+        //下方替換網址列表,注意都要引號及逗號
+        const urlGroup = [
+          'i9bet56.com',
+          'i9bet69.com',
+          'i9bet76.com',
+          'i9bet70.com',
+          'i9bet67.com',
+          'i9bet60.com',//最後一個不用逗號
+        ];
+        let url = urlGroup[Math.floor(Math.random() * urlGroup.length)];
+        let port = protGroup[Math.floor(Math.random() * protGroup.length)];
+        $(this).attr('href', str1 + str2 + '' + url + '');  //此段是把上面宣告的東西都加在一起,變成一個完整的網址
+
+      });
+      //單按鈕跳轉隨機網址程式 end
+
+
+      //這裡是活動用按鈕隨機跳轉網址start
+
+      // $('.act').click(function () {
+      //     var str1 = 'https';
+      //     var str2 = '://';
+      //     var protGroup = ['/']; //網址後的port選擇   比如 https://0011540.com:540   540就是他的port
+      //     //上方.act 是指定按鈕的class
+      //     //下方替換網址列表,注意都要引號及逗號
+      //     const urlGroup = [
+      //         '5522540.com',
+      //         '6655540.com',
+      //         '6611540.com',
+      //         '7799540.com',
+      //         '8866540.com'    //最後一個不用逗號
+      //     ];
+      //     let url = urlGroup[Math.floor(Math.random() * urlGroup.length)];
+      //     let port = protGroup[Math.floor(Math.random() * protGroup.length)];
+      //     $(this).attr('href', str1 + str2 + '' + url + '');  //此段是把上面宣告的東西都加在一起,變成一個完整的網址
+      // });
+      //這裡是活動用按鈕隨機跳轉網址end
+
+
+
+
+
+    });
+
+
+
+
+  </script>
+
+</body>
+
+</html>
